@@ -5,11 +5,9 @@
 </template>
 
 <script>
-// import Cantainer from '../src/components/Cantainer.vue'
 export default {
   name: 'App',
   components: {
-    // Cantainer
   }
 }
 </script>

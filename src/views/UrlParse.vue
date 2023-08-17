@@ -24,7 +24,12 @@
             }
         },
         mounted() {
-            request('get','/user',{url: '/user'}).then(res => {
+            let param = {
+                method:'get',
+                url: '/user',
+                params: {test:'test'}
+            }
+            request(param).then(res => {
                 console.log(res, 'res')
             })
             // this.arr.filter(item => {
