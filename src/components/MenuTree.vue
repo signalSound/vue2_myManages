@@ -48,4 +48,7 @@ import router from '@/router'
     }
 </script>
 <style>
+.el-scrollbar__wrap {
+ overflow-x: hidden;
+}
 </style>

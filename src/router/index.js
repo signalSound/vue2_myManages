@@ -21,12 +21,12 @@ Vue.use(Router)
 
 export const constantRoutes = [
   
-  {
-    path: '/',
-    component: () => import('@/views/home'),
-    redirect: '/login',
-    hidden: true
-  },
+  // {
+  //   path: '/',
+  //   component: () => import('@/views/home'),
+  //   redirect: '/login',
+  //   hidden: true
+  // },
   // {
   //   path: '/redirect',
   //   component: Layout,
@@ -94,9 +94,9 @@ export const constantRoutes = [
 // export default new Router({
   export let asyncRouterMap = [
     {
-      path: '',
+      path: '/',
       component: 'home',
-      // redirect: '/Echart',
+      redirect: '/Echart',
       hidden: true,
       children: [
         {
