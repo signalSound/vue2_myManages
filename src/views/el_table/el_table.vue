@@ -11,7 +11,7 @@
                 </el-select>
             </el-form-item>
             <el-form-item>
-                <el-button type="primary" @click="onSubmit">查询</el-button>
+                <el-button type="primary" @click="onSubmit">查询 {{name}}</el-button>
             </el-form-item>
         </el-form>
         <div class="table_content">
@@ -47,6 +47,7 @@
     </div>
 </template>
 <script>
+	import {mapActions, mapState} from 'vuex'
     export default {
         data() {
             return {
@@ -109,6 +110,9 @@
                 }]
             }
         },
+        computed: {
+			...mapState(['name']),
+		},
         methods: {
             handleSizeChange(val) {
                 console.log(`每页 ${val} 条`);
@@ -117,7 +121,7 @@
                 console.log(`当前页: ${val}`);
             },
             onSubmit() {
-                console.log('submit!');
+                this.$store.commit('saveName', this.formInline.user)
             }
         },
         mounted() {

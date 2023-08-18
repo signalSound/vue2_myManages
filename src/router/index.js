@@ -114,6 +114,13 @@ export const constantRoutes = [
           children: []
         },
         {
+          path: '/Preview',
+          name: 'Preview',
+          component: "docx/Preview",
+          meta: {title: '文件预览', keep: true},
+          children: []
+        },
+        {
           path: '/Qrcode',
           name: 'Qrcode',
           component: "code/qrcode",

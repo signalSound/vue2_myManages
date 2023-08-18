@@ -8,6 +8,7 @@ const state={ //要设置的全局访问的state对象,赋予初始属性值
     cache:'',
     routerArr: [],
     passInfo: null,
+    name: ''
   }; 
 const mutations = {
     getRouterDates(state, routes){
@@ -15,6 +16,9 @@ const mutations = {
     },
     savePass(state, infos){
         state.passInfo = infos
+    },
+    saveName(state, name){
+        state.name = name
     }
 }
 const store = new Vuex.Store(
