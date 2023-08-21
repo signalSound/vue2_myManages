@@ -121,6 +121,13 @@ export const constantRoutes = [
           children: []
         },
         {
+          path: '/xlsx',
+          name: 'xlsx',
+          component: "xlsx/xlsx",
+          meta: {title: 'excel导出', keep: true},
+          children: []
+        },
+        {
           path: '/Qrcode',
           name: 'Qrcode',
           component: "code/qrcode",
